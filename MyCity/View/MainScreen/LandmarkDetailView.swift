@@ -81,7 +81,6 @@ struct LandmarkDetailView: View {
 }
 
 struct LandmarkDetailView_Previews: PreviewProvider {
-    static let landmarks: [Landmark] = Bundle.main.decode("sevastopol.json")
     static var previews: some View {
         LandmarkDetailView(landmark: landmarks[0])
     }

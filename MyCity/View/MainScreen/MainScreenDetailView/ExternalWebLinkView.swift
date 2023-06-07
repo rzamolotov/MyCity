@@ -28,7 +28,6 @@ struct ExternalWebLinkView: View {
 }
 
 struct ExternalWebLinkView_Previews: PreviewProvider {
-    static let landmarks: [Landmark] = Bundle.main.decode("sevastopol.json")
     static var previews: some View {
         ExternalWebLinkView(landmark: landmarks[0])
     }

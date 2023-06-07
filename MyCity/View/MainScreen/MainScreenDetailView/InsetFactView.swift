@@ -25,7 +25,7 @@ struct InsetFactView: View {
 }
 
 struct InsetFactView_Previews: PreviewProvider {
-    static let landmarks: [Landmark] = Bundle.main.decode("sevastopol.json")
+
     static var previews: some View {
         InsetFactView(landmark: landmarks[0])
     }

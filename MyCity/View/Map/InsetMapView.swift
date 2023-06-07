@@ -17,15 +17,15 @@ struct InsetMapView: View {
     
     var body: some View {
         ZStack {
-//            Map(coordinateRegion: <#T##MKCoordinateRegion#>)
-//
+            Map(coordinateRegion: $region)
+
             NavigationLink(destination: MapView()) {
                 HStack{
                     Image(systemName: "mappin.circle")
                         .foregroundColor(.white)
                         .imageScale(.large)
                     Text("Посмотреть на карте")
-                        .foregroundColor(.accentColor)
+                        .foregroundColor(.white)
                         .fontWeight(.bold)
                 }
                 .padding(.vertical, 10)

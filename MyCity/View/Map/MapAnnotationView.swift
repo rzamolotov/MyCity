@@ -25,8 +25,8 @@ struct MapAnnotationView: View {
                 
             Image(systemName: "mappin.circle")
                 .foregroundColor(.accentColor)
-                
-                .scaledToFit()
+                .font(.title)
+                .scaledToFill()
                 .frame(width: 48, height: 48)
             .clipShape(Circle())
         }
