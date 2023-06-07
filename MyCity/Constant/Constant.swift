@@ -35,6 +35,14 @@ let fontSizeMediuPlus = screen.height / 40
 let fontSizeLarge = screen.height / 30
 let fontSizeHuge = screen.height / 20
 
+//COLORS
+let greenColor: Color = Color("greenColor")
+let greenBrightColor: Color = Color("greenBrightColor")
+let yellowColor: Color = Color("yellowColor")
+let yellowLightColor: Color = Color("yellowLightColor")
+let fontColor: Color = Color("fontColor")
+let backgrounColor: Color = Color("backgroundColor")
+
 // LAYOUT
 let screen = UIScreen.main.bounds
 

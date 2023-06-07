@@ -20,22 +20,20 @@ struct LandmarkDetailView: View {
                     .scaledToFit()
                 //Title
                 Text(landmark.name.uppercased())
-                    .font(.title)
-                    .fontWeight(.heavy)
-                    .multilineTextAlignment(.center)
+                    .font(.custom(boldFont, size: fontSizeLarge))
                     .padding(.vertical, 8)
-                    .foregroundColor(.primary)
-                    .background(
-                        Color.accentColor
-                        .frame(height: 6)
-                        .offset(y: 24)
-                    )
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(fontColor)
+                
+                Rectangle()
+                    .frame(width: screen.width / 2, height: 6)
+                    .foregroundColor(greenColor)
                 
             //Headline
                 Text(landmark.headline)
-                    .font(.headline)
+                    .font(.custom(regularFont, size: fontSizeMedium))
                     .multilineTextAlignment(.leading)
-                    .foregroundColor(.accentColor)
+                    .foregroundColor(greenBrightColor)
                     .padding(.horizontal)
                 
                 //Gallery
