@@ -1,0 +1,30 @@
+[
+  {
+    "id" : 1,
+    "name" : "cover-ships"
+  },
+  {
+    "id" : 2,
+    "name" : "cover-aiya"
+  },
+  {
+    "id" : 3,
+    "name" : "cover-fiolent"
+  },
+  {
+    "id" : 4,
+    "name" : "cover-konstantinbattary"
+  },
+  {
+    "id" : 5,
+    "name" : "cover-mikhailovbattary"
+  },
+  {
+    "id" : 6,
+    "name" : "cover-muzeyflota"
+  },
+  {
+    "id" : 7,
+    "name" : "cover-submarine"
+  }
+]
