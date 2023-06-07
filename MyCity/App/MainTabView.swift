@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct MainTabView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView{
+            MainScreenView()
+                .tabItem {
+                    Image(systemName: "star")
+                    Text("Главная")
+                }
+            MapView()
+                .tabItem {
+                    Image(systemName: "map")
+                    Text("Карта")
+                }
         }
-        .padding()
     }
 }
 
