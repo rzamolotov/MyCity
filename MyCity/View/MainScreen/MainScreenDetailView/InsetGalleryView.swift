@@ -18,8 +18,8 @@ struct InsetGalleryView: View {
                     Image(image)
                         .resizable()
                         .scaledToFit()
-                        .frame(height: 200)
-                    .cornerRadius(12)
+                        .frame(height: screen.height / 4)
+                        .cornerRadius(12)
                 }
             }
         }

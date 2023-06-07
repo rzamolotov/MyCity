@@ -55,6 +55,8 @@ struct LandmarkDetailView: View {
                     Text(landmark.description)
                         .multilineTextAlignment(.leading)
                         .layoutPriority(1)
+                        .font(.custom(mediumFont, size: fontSizeMedium))
+                        .foregroundColor(fontColor)
                     //map
                     Group {
                         HeadingView(headingImage: "map", headingText: "Найти на карте")

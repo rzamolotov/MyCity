@@ -38,7 +38,7 @@ struct MainScreenView: View {
                 if !isGridVieActive {
                     List {
                         CoverImageView()
-                            .frame(height: 300)
+                            .frame(height: screen.height / 2.5)
                             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         
                         ForEach(landmarks) { landmark in
@@ -52,7 +52,7 @@ struct MainScreenView: View {
                         LazyVGrid(columns: gridLayout, alignment: .center, spacing: 10) {
                             ForEach(landmarks) { landmark in
                                 NavigationLink(destination: LandmarkDetailView(landmark: landmark)) {
-                                    GridItemView(landmark: landmark)
+                                    GridItemView(landmark: landmark, numberOfRows: gridColumn)
                                 }
                             }
                         }
@@ -71,7 +71,7 @@ struct MainScreenView: View {
                         } label: {
                             Image(systemName: "square.fill.text.grid.1x2")
                                 .font(.title2)
-                                .foregroundColor(isGridVieActive ? .primary : .accentColor)
+                                .foregroundColor(isGridVieActive ? fontColor : .accentColor)
                         }
                        
                         
@@ -81,7 +81,7 @@ struct MainScreenView: View {
                         } label: {
                             Image(systemName: toolbarIcon)
                                 .font(.title2)
-                                .foregroundColor(isGridVieActive ? .accentColor : .primary)
+                                .foregroundColor(isGridVieActive ? .accentColor : fontColor)
                         }
 
                     }

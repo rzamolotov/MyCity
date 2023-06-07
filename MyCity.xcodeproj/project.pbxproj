@@ -217,6 +217,7 @@
 		763766982A308CF60019BA53 /* MainScreenRow */ = {
 			isa = PBXGroup;
 			children = (
+				763766A62A308DE20019BA53 /* CoverImageView.swift */,
 				763766A12A308DE10019BA53 /* ListItemView.swift */,
 				763766A32A308DE20019BA53 /* GridItemView.swift */,
 			);
@@ -226,7 +227,6 @@
 		763766992A308D030019BA53 /* MainScreenDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				763766A62A308DE20019BA53 /* CoverImageView.swift */,
 				763766A02A308DE10019BA53 /* InsetGalleryView.swift */,
 				763766A72A308DE20019BA53 /* ExternalWebLinkView.swift */,
 				763766A82A308DE20019BA53 /* HeadingView.swift */,

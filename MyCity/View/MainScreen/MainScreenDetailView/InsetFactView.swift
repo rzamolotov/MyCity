@@ -14,11 +14,11 @@ struct InsetFactView: View {
             TabView {
                 ForEach(landmark.fact, id: \.self) { item in
                     Text(item)
-                    
+                        .font(.custom(mediumFont, size: fontSizeMedium))
+                        .foregroundColor(fontColor)
                 }
             }
             .tabViewStyle(.page)
-            
             .frame(minHeight: 148, idealHeight: 168, maxHeight: 180)
         }
     }
