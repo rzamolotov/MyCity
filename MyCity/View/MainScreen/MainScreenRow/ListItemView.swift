@@ -16,18 +16,20 @@ struct ListItemView: View {
             Image(landmark.image)
                 .resizable()
                 .scaledToFill()
-                .frame(width: 90, height: 90)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .frame(width: screen.height / 10, height: screen.height / 10)
+                .clipShape(Rectangle())
+                .cornerRadius(10)
             VStack(alignment: .leading, spacing: 8) {
                 Text(landmark.name)
-                    .font(.title3)
+                    .font(.custom(boldFont, size: fontSizeMediuPlus))
                     .lineLimit(1)
                     .foregroundColor(.accentColor)
                 Text(landmark.headline)
-                    .font(.footnote)
+                    .font(.custom(mediumFont, size: fontSizeSmall))
                     .multilineTextAlignment(.leading)
                     .lineLimit(2)
                     .padding(.trailing, 8)
+                    .foregroundColor(fontColor)
             }
         }
     }

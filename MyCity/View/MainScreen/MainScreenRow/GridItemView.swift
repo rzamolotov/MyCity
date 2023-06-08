@@ -36,7 +36,6 @@ struct GridItemView: View {
                         )
                         
                     Spacer()
-                    
                 }
             }
         }
