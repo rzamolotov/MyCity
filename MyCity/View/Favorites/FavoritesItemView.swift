@@ -13,8 +13,12 @@ struct FavoritesItemView: View {
     
     var body: some View {
         HStack{
-            FavoritesCheckBoxView(isAddToRoute: favoritesVM.isAddToRoute)
-            ListItemView(landmark: landmark)
+            FavoritesCheckBoxView(isAddToRoute: $favoritesVM.isAddToRoute)
+            NavigationLink {
+                LandmarkDetailView(landmark: landmark)
+            } label: {
+                ListItemView(landmark: landmark)
+            }
         }
     }
 }
@@ -22,5 +26,6 @@ struct FavoritesItemView: View {
 struct FavoritesItemView_Previews: PreviewProvider {
     static var previews: some View {
         FavoritesItemView(landmark: landmarks[0])
+            .environmentObject(FavoriteViewMoidel())
     }
 }

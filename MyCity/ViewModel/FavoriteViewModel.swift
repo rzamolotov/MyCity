@@ -10,9 +10,13 @@ import Combine
 
 class FavoriteViewMoidel: ObservableObject {
     
-    @Published var isAddToRoute: Bool = false
-    @Published var isAddToFavorite: Bool = false
+    @Published var isAddToRoute: Bool
+    @Published var isAddToFavorite: Bool
     
+    init() {
+        self.isAddToRoute = false
+        self.isAddToFavorite = false
+    }
  
     
 }

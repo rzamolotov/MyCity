@@ -8,17 +8,22 @@
 import SwiftUI
 
 struct FavoritesCheckBoxView: View {
-    @State var isAddToRoute: Bool
+    @Binding var isAddToRoute: Bool
     
     var body: some View {
-        Image(systemName: isAddToRoute ? "checkmark.square" : "square")
-            .foregroundColor(.accentColor)
-            .font(.title)
+        Button{
+            isAddToRoute.toggle()
+        } label: {
+            Image(systemName: isAddToRoute ? "checkmark.square" : "square")
+                .foregroundColor(.accentColor)
+                .font(.title)
+        }
+       
     }
 }
 
 struct FavoritesCheckBoxView_Previews: PreviewProvider {
     static var previews: some View {
-        FavoritesCheckBoxView(isAddToRoute: false)
+        FavoritesCheckBoxView(isAddToRoute: .constant(false))
     }
 }
