@@ -8,11 +8,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Montserrat-Bold.ttf">
-            <string>Montserrat-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -22,29 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="МОИ МЕСТА" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="obG-Y5-kRd">
-                                <rect key="frame" x="86" y="445" width="221" height="30.666666666666686"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="25"/>
-                                <color key="textColor" name="greenColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo2" translatesAutoresizingMaskIntoConstraints="NO" id="d6L-TA-yr3">
-                                <rect key="frame" x="23" y="290" width="346" height="185"/>
+                                <rect key="frame" x="23.666666666666657" y="333.66666666666669" width="346" height="185.00000000000006"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="185" id="0tg-QN-56k"/>
-                                    <constraint firstAttribute="width" constant="346" id="oWy-cI-fxl"/>
+                                    <constraint firstAttribute="width" constant="346" id="Jau-Qg-SQG"/>
+                                    <constraint firstAttribute="height" constant="185" id="q1r-lg-Ozw"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
-                            <constraint firstItem="d6L-TA-yr3" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="231" id="0kS-NN-WZh"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="bottom" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="342.32999999999998" id="HED-8k-iNU"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="obG-Y5-kRd" secondAttribute="trailing" constant="86" id="Lwa-2r-7ic"/>
-                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="d6L-TA-yr3" secondAttribute="trailing" constant="24" id="U6c-JX-8aq"/>
-                            <constraint firstItem="obG-Y5-kRd" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="86" id="Z9S-WY-md6"/>
-                            <constraint firstItem="d6L-TA-yr3" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" constant="23" id="eBr-N1-L99"/>
+                            <constraint firstItem="d6L-TA-yr3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4pI-qz-i05"/>
+                            <constraint firstItem="d6L-TA-yr3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="iMz-Cd-MaF"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -57,9 +42,6 @@
         <image name="Logo2" width="1024" height="1024"/>
         <namedColor name="backgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
-        <namedColor name="greenColor">
-            <color red="0.18799999356269836" green="0.60000002384185791" blue="0.45899999141693115" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
