@@ -7,16 +7,16 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class FavoriteViewMoidel: ObservableObject {
     
-    @Published var isAddToRoute: Bool
-    @Published var isAddToFavorite: Bool
+    
+    @AppStorage("ISADDTOROUTE") var isAddToRoute: Bool = false
+    @AppStorage("ISADDTOFAVORITE") var isAddToFavorite: Bool = false
     
     init() {
-        self.isAddToRoute = false
-        self.isAddToFavorite = false
+        print("item is add to route \(isAddToRoute)")
+        print("item is add to favorite \(isAddToFavorite)")
     }
- 
-    
 }

@@ -48,6 +48,8 @@
 		76F2DF232A32179F009EDFAA /* FavoritesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2DF222A32179F009EDFAA /* FavoritesItemView.swift */; };
 		76F2DF252A3217C3009EDFAA /* FavoritesCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2DF242A3217C3009EDFAA /* FavoritesCheckBoxView.swift */; };
 		76F2DF272A321A70009EDFAA /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2DF262A321A70009EDFAA /* FavoriteViewModel.swift */; };
+		76F2DF292A32672D009EDFAA /* FavoriteButtonVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2DF282A32672D009EDFAA /* FavoriteButtonVIew.swift */; };
+		76F2DF2B2A326CA8009EDFAA /* FavoritesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2DF2A2A326CA8009EDFAA /* FavoritesRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		76F2DF222A32179F009EDFAA /* FavoritesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemView.swift; sourceTree = "<group>"; };
 		76F2DF242A3217C3009EDFAA /* FavoritesCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCheckBoxView.swift; sourceTree = "<group>"; };
 		76F2DF262A321A70009EDFAA /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		76F2DF282A32672D009EDFAA /* FavoriteButtonVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonVIew.swift; sourceTree = "<group>"; };
+		76F2DF2A2A326CA8009EDFAA /* FavoritesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +248,7 @@
 				763766A72A308DE20019BA53 /* ExternalWebLinkView.swift */,
 				763766A82A308DE20019BA53 /* HeadingView.swift */,
 				763766A22A308DE20019BA53 /* InsetFactView.swift */,
+				76F2DF282A32672D009EDFAA /* FavoriteButtonVIew.swift */,
 			);
 			path = MainScreenDetailView;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			children = (
 				76F2DF222A32179F009EDFAA /* FavoritesItemView.swift */,
 				76F2DF242A3217C3009EDFAA /* FavoritesCheckBoxView.swift */,
+				76F2DF2A2A326CA8009EDFAA /* FavoritesRow.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -378,6 +384,7 @@
 				763766782A3088010019BA53 /* MainTabView.swift in Sources */,
 				763766AD2A308DE20019BA53 /* GridItemView.swift in Sources */,
 				763766B32A308DE20019BA53 /* MapAnnotationView.swift in Sources */,
+				76F2DF2B2A326CA8009EDFAA /* FavoritesRow.swift in Sources */,
 				763766AB2A308DE20019BA53 /* ListItemView.swift in Sources */,
 				763766B92A3093A80019BA53 /* Constant.swift in Sources */,
 				7637668B2A308BDB0019BA53 /* LandmarkModel.swift in Sources */,
@@ -388,6 +395,7 @@
 				763766AC2A308DE20019BA53 /* InsetFactView.swift in Sources */,
 				763766B52A308E6F0019BA53 /* MapView.swift in Sources */,
 				763766B72A308EDA0019BA53 /* CoverImageModel.swift in Sources */,
+				76F2DF292A32672D009EDFAA /* FavoriteButtonVIew.swift in Sources */,
 				76F2DF252A3217C3009EDFAA /* FavoritesCheckBoxView.swift in Sources */,
 				763766AE2A308DE20019BA53 /* InsetMapView.swift in Sources */,
 				763766AF2A308DE20019BA53 /* MotionAnimationView.swift in Sources */,

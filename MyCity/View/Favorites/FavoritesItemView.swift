@@ -9,11 +9,10 @@ import SwiftUI
 
 struct FavoritesItemView: View {
     var landmark: Landmark
-    @StateObject var favoritesVM = FavoriteViewMoidel()
-    
+
     var body: some View {
         HStack{
-            FavoritesCheckBoxView(isAddToRoute: $favoritesVM.isAddToRoute)
+            FavoritesCheckBoxView(landmark: landmark)
             NavigationLink {
                 LandmarkDetailView(landmark: landmark)
             } label: {

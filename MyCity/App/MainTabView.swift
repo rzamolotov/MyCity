@@ -21,6 +21,12 @@ struct MainTabView: View {
                     Image(systemName: "map")
                     Text("Карта")
                 }
+            FavoritesRow(landmarks: landmarks)
+                .tabItem {
+                    Image(systemName: "heart")
+                    Text("Избранное")
+
+                }
         }
     }
 }

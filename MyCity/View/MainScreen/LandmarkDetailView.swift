@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LandmarkDetailView: View {
     
-    let landmark: Landmark
+    var landmark: Landmark
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
@@ -30,11 +30,15 @@ struct LandmarkDetailView: View {
                     .foregroundColor(greenColor)
                 
             //Headline
-                Text(landmark.headline)
-                    .font(.custom(regularFont, size: fontSizeMedium))
-                    .multilineTextAlignment(.leading)
-                    .foregroundColor(greenBrightColor)
-                    .padding(.horizontal)
+                HStack{
+                    Text(landmark.headline)
+                        .font(.custom(regularFont, size: fontSizeMedium))
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(greenBrightColor)
+                        .padding(.horizontal)
+                    
+                    FavoriteButtonVIew(landmark: landmark)
+                }
                 
                 //Gallery
                 Group {
@@ -83,5 +87,6 @@ struct LandmarkDetailView: View {
 struct LandmarkDetailView_Previews: PreviewProvider {
     static var previews: some View {
         LandmarkDetailView(landmark: landmarks[0])
+            .environmentObject(FavoriteViewMoidel())
     }
 }

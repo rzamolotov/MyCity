@@ -19,6 +19,8 @@ struct Landmark: Identifiable, Codable {
     let image: String
     let gallery: [String]
     let fact: [String]
+    var isAddToRoute: Bool
+    var isAddToFavorite: Bool
     
     var location: CLLocationCoordinate2D {
     CLLocationCoordinate2D(latitude: latitude, longitude: longitude)

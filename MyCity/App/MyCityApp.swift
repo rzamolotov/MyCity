@@ -12,6 +12,7 @@ struct MyCityApp: App {
     var body: some Scene {
         WindowGroup {
             MainTabView()
+                .environmentObject(FavoriteViewMoidel())
         }
     }
 }
