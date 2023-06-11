@@ -9,7 +9,7 @@ import Foundation
 import MapKit
 
 struct Landmark: Identifiable, Codable {
-    let id: String
+    let id: Int
     let latitude: Double
     let longitude: Double
     let name: String

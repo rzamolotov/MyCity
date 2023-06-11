@@ -10,15 +10,14 @@ import SwiftUI
 struct FavoriteButtonVIew: View {
     
     @State var landmark: Landmark
-    @EnvironmentObject var favoritesVM: FavoriteViewMoidel
+    @StateObject var favoritesVM = FavoritesViewModel()
     
     var body: some View {
         
         Button {
-            favoritesVM.isAddToFavorite.toggle()
-            landmark.isAddToFavorite = favoritesVM.isAddToFavorite
+            favoritesVM.toggleFavorite(landmarksFavorite: landmark)
         } label: {
-            Image(systemName: favoritesVM.isAddToFavorite ? "heart.fill" : "heart")
+            Image(systemName: favoritesVM.contains(landmark) ? "heart.fill" : "heart")
                 .foregroundColor(.accentColor)
                 .font(.title)
         }
@@ -28,6 +27,6 @@ struct FavoriteButtonVIew: View {
 struct FavoriteButtonVIew_Previews: PreviewProvider {
     static var previews: some View {
         FavoriteButtonVIew(landmark: landmarks[0])
-            .environmentObject(FavoriteViewMoidel())
+            
     }
 }

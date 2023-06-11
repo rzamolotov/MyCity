@@ -25,6 +25,6 @@ struct FavoritesItemView: View {
 struct FavoritesItemView_Previews: PreviewProvider {
     static var previews: some View {
         FavoritesItemView(landmark: landmarks[0])
-            .environmentObject(FavoriteViewMoidel())
+            .environmentObject(FavoritesViewModel())
     }
 }

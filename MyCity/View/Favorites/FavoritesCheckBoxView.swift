@@ -9,14 +9,12 @@ import SwiftUI
 
 struct FavoritesCheckBoxView: View {
     @State var landmark: Landmark
-    @EnvironmentObject var favoritesVM: FavoriteViewMoidel
     
     var body: some View {
         Button {
-            favoritesVM.isAddToRoute.toggle()
-            landmark.isAddToRoute = favoritesVM.isAddToRoute
+            landmark.isAddToRoute.toggle()
         } label: {
-            Image(systemName: favoritesVM.isAddToRoute ? "checkmark.square" : "square")
+            Image(systemName: landmark.isAddToRoute ? "checkmark.square" : "square")
                 .foregroundColor(.accentColor)
                 .font(.title)
         }
@@ -26,6 +24,6 @@ struct FavoritesCheckBoxView: View {
 struct FavoritesCheckBoxView_Previews: PreviewProvider {
     static var previews: some View {
         FavoritesCheckBoxView(landmark: landmarks[0])
-            .environmentObject(FavoriteViewMoidel())
+            .environmentObject(FavoritesViewModel())
     }
 }

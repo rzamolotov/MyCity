@@ -87,6 +87,6 @@ struct LandmarkDetailView: View {
 struct LandmarkDetailView_Previews: PreviewProvider {
     static var previews: some View {
         LandmarkDetailView(landmark: landmarks[0])
-            .environmentObject(FavoriteViewMoidel())
+            .environmentObject(FavoritesViewModel())
     }
 }

@@ -21,7 +21,7 @@ struct MainTabView: View {
                     Image(systemName: "map")
                     Text("Карта")
                 }
-            FavoritesRow(landmarks: landmarks)
+            FavoritesRow()
                 .tabItem {
                     Image(systemName: "heart")
                     Text("Избранное")
