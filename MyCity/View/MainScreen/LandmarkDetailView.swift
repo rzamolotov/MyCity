@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LandmarkDetailView: View {
-    
-    var landmark: Landmark
+
+      @State var landmark: Landmark
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {

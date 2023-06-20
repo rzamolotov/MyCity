@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct FavoritesCheckBoxView: View {
-    @State var landmark: Landmark
+
+     var landmark: Landmark
     
     var body: some View {
         Button {
-            landmark.isAddToRoute.toggle()
+//            landmark.isAddToRoute.toggle()
         } label: {
             Image(systemName: landmark.isAddToRoute ? "checkmark.square" : "square")
                 .foregroundColor(.accentColor)

@@ -1,5 +1,5 @@
 [{
-    "id": 1,
+    "id": "1",
     "latitude" : 44.611667,
     "longitude" : 33.493333,
     "name": "Херсонес Таврический",
@@ -20,7 +20,7 @@
     "isAddToFavorite": false
 },
     {
-        "id": 2,
+        "id": "2",
         "latitude" : 44.617023,
         "longitude" : 33.526630,
         "name": "Графская пристань",
@@ -42,7 +42,7 @@
         "isAddToFavorite": false
     },
     {
-        "id": 3,
+        "id": "3",
         "latitude" : 44.595548,
         "longitude" : 33.519404,
         "name": "Панорама «Оборона Севастополя»",

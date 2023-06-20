@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListItemView: View {
     
-    let landmark: Landmark
+   var landmark: Landmark
     
     var body: some View {
         HStack(alignment: .center, spacing: 16) {
@@ -38,5 +38,6 @@ struct ListItemView: View {
 struct ListItemView_Previews: PreviewProvider {
     static var previews: some View {
         ListItemView(landmark: landmarks[0])
+            .environmentObject(FavoritesViewModel())
     }
 }

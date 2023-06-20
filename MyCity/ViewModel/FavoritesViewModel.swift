@@ -9,39 +9,38 @@ import Foundation
 import SwiftUI
 
 class FavoritesViewModel: ObservableObject {
-    @Published var landmarksFavorite = [Landmark]()
-    @Published var showingFavorites = false
-    @Published var savedItems: Set<Int> = [1, 2]
+    @AppStorage("favorites") var favoritesData: Data = Data()
     
-    var filteredFavorites: [Landmark] {
-        if showingFavorites {
-            return landmarksFavorite.filter { savedItems.contains($0.id) }
-        } else {
-            return landmarksFavorite
-        }
-    }
-    private var db = FavoriteDataBase()
+    @Published var favorites: [Landmark] = []
     
     init() {
-        self.savedItems = db.load()
+        loadFavorites()
     }
     
-    func sortFavorites() {
-        withAnimation {
-            showingFavorites.toggle()
+    func loadFavorites() {
+        if let decodedData = try? JSONDecoder().decode([Landmark].self, from: favoritesData) {
+            favorites = decodedData
         }
     }
     
-    func contains(_ landmarksFavorite: Landmark) -> Bool {
-        savedItems.contains(landmarksFavorite.id)
+    func saveFavorites() {
+        if let encodedData = try? JSONEncoder().encode(favorites) {
+            favoritesData = encodedData
+            UserDefaults.standard.synchronize()
+        }
     }
     
-    func toggleFavorite(landmarksFavorite: Landmark) {
-        if contains(landmarksFavorite) {
-            savedItems.remove(landmarksFavorite.id)
+    func addToFavorites(item: Landmark) {
+        if !favorites.contains(where: { $0.id == item.id }) {
+            favorites.append(item)
+            saveFavorites()
         } else {
-            savedItems.insert(landmarksFavorite.id)
+            favorites.removeAll { $0.id == item.id }
+            saveFavorites()
         }
-        db.save(landmarksFavorite: savedItems)
+    }
+    
+    func isFavorite(item: Landmark) -> Bool {
+        return favorites.contains(where: { $0.id == item.id })
     }
 }

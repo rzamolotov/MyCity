@@ -9,23 +9,30 @@ import SwiftUI
 
 struct MainTabView: View {
     
+    @EnvironmentObject var favoritesVM: FavoritesViewModel
+    
     var body: some View {
         TabView{
+            
             MainScreenView()
+                .environmentObject(favoritesVM)
                 .tabItem {
                     Image(systemName: "star")
                     Text("Главная")
                 }
+            
             MapView()
                 .tabItem {
                     Image(systemName: "map")
                     Text("Карта")
                 }
-            FavoritesRow()
+            
+            FavoritesRowView()
+                .environmentObject(favoritesVM)
                 .tabItem {
                     Image(systemName: "heart")
                     Text("Избранное")
-
+                    
                 }
         }
     }
