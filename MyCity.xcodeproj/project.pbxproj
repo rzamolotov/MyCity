@@ -44,9 +44,11 @@
 		763766CE2A309D0D0019BA53 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 763766C32A309D0D0019BA53 /* Montserrat-ThinItalic.ttf */; };
 		763766CF2A309D0D0019BA53 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 763766C42A309D0D0019BA53 /* Montserrat-ExtraLight.ttf */; };
 		763766D22A30C9680019BA53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 763766D12A30C9680019BA53 /* LaunchScreen.storyboard */; };
+		76579BAD2A423F9D00DB6A44 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579BAC2A423F9D00DB6A44 /* TabBarItem.swift */; };
+		76579BAF2A4390C200DB6A44 /* MapSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76579BAE2A4390C200DB6A44 /* MapSearchViewModel.swift */; };
 		767E22FE2A34992E00AAB221 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767E22FD2A34992E00AAB221 /* FavoritesViewModel.swift */; };
 		767E23002A35EDF300AAB221 /* FavoritesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767E22FF2A35EDF300AAB221 /* FavoritesRowView.swift */; };
-		76F2DF212A31F629009EDFAA /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2DF202A31F629009EDFAA /* MapViewModel.swift */; };
+		76F2DF212A31F629009EDFAA /* MapViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2DF202A31F629009EDFAA /* MapViewContainer.swift */; };
 		76F2DF232A32179F009EDFAA /* FavoritesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2DF222A32179F009EDFAA /* FavoritesItemView.swift */; };
 		76F2DF252A3217C3009EDFAA /* FavoritesCheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2DF242A3217C3009EDFAA /* FavoritesCheckBoxView.swift */; };
 		76F2DF292A32672D009EDFAA /* FavoriteButtonVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F2DF282A32672D009EDFAA /* FavoriteButtonVIew.swift */; };
@@ -92,9 +94,11 @@
 		763766C42A309D0D0019BA53 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
 		763766D02A309EC20019BA53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		763766D12A30C9680019BA53 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		76579BAC2A423F9D00DB6A44 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		76579BAE2A4390C200DB6A44 /* MapSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSearchViewModel.swift; sourceTree = "<group>"; };
 		767E22FD2A34992E00AAB221 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		767E22FF2A35EDF300AAB221 /* FavoritesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRowView.swift; sourceTree = "<group>"; };
-		76F2DF202A31F629009EDFAA /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		76F2DF202A31F629009EDFAA /* MapViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewContainer.swift; sourceTree = "<group>"; };
 		76F2DF222A32179F009EDFAA /* FavoritesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesItemView.swift; sourceTree = "<group>"; };
 		76F2DF242A3217C3009EDFAA /* FavoritesCheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCheckBoxView.swift; sourceTree = "<group>"; };
 		76F2DF282A32672D009EDFAA /* FavoriteButtonVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButtonVIew.swift; sourceTree = "<group>"; };
@@ -114,7 +118,6 @@
 		763766692A3088010019BA53 = {
 			isa = PBXGroup;
 			children = (
-				763766D12A30C9680019BA53 /* LaunchScreen.storyboard */,
 				763766742A3088010019BA53 /* MyCity */,
 				763766732A3088010019BA53 /* Products */,
 			);
@@ -156,6 +159,8 @@
 		763766832A308B4B0019BA53 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				76579BAB2A423F8900DB6A44 /* TabBar */,
+				763766D12A30C9680019BA53 /* LaunchScreen.storyboard */,
 				7637669C2A308D250019BA53 /* Profile */,
 				7637669B2A308D1E0019BA53 /* Favorites */,
 				7637669A2A308D190019BA53 /* Map */,
@@ -176,9 +181,9 @@
 		763766872A308B920019BA53 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				763766952A308CBE0019BA53 /* CodableBundleExtention.swift */,
-				76F2DF202A31F629009EDFAA /* MapViewModel.swift */,
-				767E22FD2A34992E00AAB221 /* FavoritesViewModel.swift */,
+				76579BAA2A42342300DB6A44 /* Network */,
+				76579BA82A4233FF00DB6A44 /* Map */,
+				76579BA72A4233E600DB6A44 /* Favorites */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -290,6 +295,39 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		76579BA72A4233E600DB6A44 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				767E22FD2A34992E00AAB221 /* FavoritesViewModel.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		76579BA82A4233FF00DB6A44 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				76F2DF202A31F629009EDFAA /* MapViewContainer.swift */,
+				76579BAE2A4390C200DB6A44 /* MapSearchViewModel.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		76579BAA2A42342300DB6A44 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				763766952A308CBE0019BA53 /* CodableBundleExtention.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		76579BAB2A423F8900DB6A44 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				76579BAC2A423F9D00DB6A44 /* TabBarItem.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -376,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76579BAF2A4390C200DB6A44 /* MapSearchViewModel.swift in Sources */,
 				763766962A308CBE0019BA53 /* CodableBundleExtention.swift in Sources */,
 				763766B22A308DE20019BA53 /* HeadingView.swift in Sources */,
 				7637669F2A308DB90019BA53 /* MainScreenView.swift in Sources */,
@@ -388,7 +427,7 @@
 				7637668B2A308BDB0019BA53 /* LandmarkModel.swift in Sources */,
 				767E22FE2A34992E00AAB221 /* FavoritesViewModel.swift in Sources */,
 				763766AA2A308DE20019BA53 /* InsetGalleryView.swift in Sources */,
-				76F2DF212A31F629009EDFAA /* MapViewModel.swift in Sources */,
+				76F2DF212A31F629009EDFAA /* MapViewContainer.swift in Sources */,
 				76F2DF232A32179F009EDFAA /* FavoritesItemView.swift in Sources */,
 				763766B02A308DE20019BA53 /* CoverImageView.swift in Sources */,
 				763766AC2A308DE20019BA53 /* InsetFactView.swift in Sources */,
@@ -398,6 +437,7 @@
 				76F2DF252A3217C3009EDFAA /* FavoritesCheckBoxView.swift in Sources */,
 				763766AE2A308DE20019BA53 /* InsetMapView.swift in Sources */,
 				763766AF2A308DE20019BA53 /* MotionAnimationView.swift in Sources */,
+				76579BAD2A423F9D00DB6A44 /* TabBarItem.swift in Sources */,
 				763766762A3088010019BA53 /* MyCityApp.swift in Sources */,
 				763766852A308B7B0019BA53 /* LandmarkDetailView.swift in Sources */,
 				767E23002A35EDF300AAB221 /* FavoritesRowView.swift in Sources */,
